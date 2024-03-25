@@ -1,6 +1,6 @@
 import { Form, Formik } from "formik";
 import React from "react";
-import s from './SearchBox.module.css'
+import s from "./SearchBox.module.css";
 
 const SearchBox = ({ onChangeFilter, filter }) => {
   return (

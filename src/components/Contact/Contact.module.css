@@ -1,29 +1,27 @@
-
 .ContactItem {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .ContactItem p {
-    margin: 0;
-    padding: 0;
-    margin-right: 20px;  
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
 }
 
 .ContactName {
-    font-weight: bold;
-   
+  font-weight: bold;
 }
 
 .ContactNumber {
-    color: #666;
+  color: #666;
 }
 
 .ContactItemButton {
-    background-color: #ff5f5f;
+  background-color: #ff5f5f;
   color: #fff;
   border: none;
   padding: 5px 10px;
@@ -32,6 +30,5 @@
 }
 
 .ContactItemButton:hover {
-    background-color: #ff3d3d;
+  background-color: #ff3d3d;
 }
-

@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import React from "react";
 import * as yup from "yup";
-import s from './ContactsForm.module.css'
+import s from "./ContactsForm.module.css";
 
 import {
   FORM_INITIAL_VALUES,
@@ -22,9 +22,7 @@ const contactsSchema = yup.object({
       MAX_CHAR_VALIDATION,
       `Your name should not contain more than ${MAX_CHAR_VALIDATION} characters`
     ),
-    number: yup
-    .string() 
-    .required("User number is required"),
+  number: yup.string().required("User number is required"),
 });
 
 const ContactForm = ({ onAddContact }) => {
@@ -43,14 +41,24 @@ const ContactForm = ({ onAddContact }) => {
         <label className={s.ContactLabel}>
           <span className={s.ContactSpanTitle}>Name</span>
           <Field className={s.ContactFormInput} type="name" name="name" />
-          <ErrorMessage component="p" name="name"/>
+          <ErrorMessage component="p" name="name" />
         </label>
         <label className={s.ContactLabel}>
           <span className={s.ContactSpanTitle}>Number</span>
-          <Field name="number" className={`${s.ContactFormInput} ${s.NumberFormInput}`} component={PhoneNumberInput} />
-          <ErrorMessage className={s.ContactSpanTitle} component="p" name="number"/>
+          <Field
+            name="number"
+            className={`${s.ContactFormInput} ${s.NumberFormInput}`}
+            component={PhoneNumberInput}
+          />
+          <ErrorMessage
+            className={s.ContactSpanTitle}
+            component="p"
+            name="number"
+          />
         </label>
-        <button className={s.ContactButton} type="submit">Add contact</button>
+        <button className={s.ContactButton} type="submit">
+          Add contact
+        </button>
       </Form>
     </Formik>
   );
